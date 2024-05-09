@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     // Collider
     [SerializeField] Rigidbody2D compPlayerBody;
     [SerializeField] BoxCollider2D compGroundDetector;
-    [SerializeField] BoxCollider2D compWallDetector;
+    [SerializeField] BoxCollider2D compLeftWallDetector, compRightWallDetector;
 
     // Player
     [SerializeField] float maxMovementSpeed;
@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
 
     // Status player
     bool isOnGround;
-    bool isOnWall;
-
+    bool isOnWallLeft, isOnWallRight;
+    float wallTimer = 5.0f;
 
     // Fungsi awal
     void Start()
@@ -50,12 +50,32 @@ public class Player : MonoBehaviour
     // Deteksi tanah
     void GroundCheck()
     {
-        Collider2D collider = Physics2D.OverlapArea(compGroundDetector.bounds.min, compGroundDetector.bounds.max);
-        isOnGround = collider.gameObject.CompareTag("Ground");
+        // Unity Insanity 1: kenapa harus declare collider dulu
+        RaycastHit2D[] colliders = new RaycastHit2D[2];
+        isOnGround = compGroundDetector.Cast(Vector2.zero, colliders) > 1;
     }
 
     void WallCheck()
     {
+        RaycastHit2D[] leftColliders = new RaycastHit2D[2];
+        RaycastHit2D[] rightColliders = new RaycastHit2D[2];
 
+        isOnWallLeft = compLeftWallDetector.Cast(Vector2.zero, leftColliders) > 1;
+        isOnWallRight = compRightWallDetector.Cast(Vector2.zero, rightColliders) > 1;
+
+        // Jika nempel tembok tapi gak ditanah
+        if ((isOnWallLeft || isOnWallRight) && !isOnGround)
+        {
+            wallTimer -= Time.deltaTime;
+        }
+        else wallTimer = 5.0f;
+
+        // TODO: Jika timer tembok masih, nyangkut ditembok
+        if (wallTimer > 0) {
+
+        }
+        else {
+
+        }
     }
 }
