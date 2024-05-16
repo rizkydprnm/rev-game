@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     {
         // Unity Insanity 1: kenapa harus declare collider dulu
         RaycastHit2D[] colliders = new RaycastHit2D[2];
-        isOnGround = compGroundDetector.Cast(Vector2.zero, colliders) > 1;
+        isOnGround = compGroundDetector.Cast(Vector2.zero, colliders) > 0;
     }
 
     void WallCheck()
