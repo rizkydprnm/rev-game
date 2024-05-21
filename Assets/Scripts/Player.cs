@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         compPlayerBody.velocity = new Vector2(direction * maxMovementSpeed, compPlayerBody.velocity.y);
 
         // Lompat
-        if (Input.GetKeyDown(KeyCode.X) && isOnGround)
+        if (Input.GetButtonDown("Jump") && isOnGround)
         {
             compPlayerBody.velocity = new Vector2(compPlayerBody.velocity.x, maxJumpPower);
         }
