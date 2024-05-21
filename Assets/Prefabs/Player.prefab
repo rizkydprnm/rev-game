@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7455500011079668699}
   m_Layer: 0
-  m_Name: Left Wall
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,38 +25,7 @@ Transform:
   m_GameObject: {fileID: 2331837099576717192}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24999988, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3310691737355500203}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4975235024309291860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3320318915764935537}
-  m_Layer: 0
-  m_Name: Right Wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3320318915764935537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4975235024309291860}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,7 +66,6 @@ Transform:
   m_Children:
   - {fileID: 820451578313921587}
   - {fileID: 7455500011079668699}
-  - {fileID: 3320318915764935537}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5389517301374699578
@@ -228,11 +196,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 8987020756058528630}
   groundDetector: {fileID: 820451578313921587}
-  leftWallDetector: {fileID: 7455500011079668699}
-  rightWallDetector: {fileID: 3320318915764935537}
+  wallDetector: {fileID: 7455500011079668699}
   maxMovementSpeed: 10
   maxJumpPower: 20
   maxFallSpeed: 20
+  wallSlideSpeed: 1
+  wallJumpKnockback: 15
+  canExtraJump: 0
+  canWallJump: 0
+  isWallJumping: 0
 --- !u!1 &8733331627760801635
 GameObject:
   m_ObjectHideFlags: 0
