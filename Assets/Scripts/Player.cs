@@ -1,12 +1,12 @@
-using Unity.Mathematics;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     // Collider
-    [SerializeField] Rigidbody2D compPlayerBody;
-    [SerializeField] BoxCollider2D compGroundDetector;
-    [SerializeField] BoxCollider2D compLeftWallDetector, compRightWallDetector;
+    [SerializeField] Rigidbody2D playerBody;
+    [SerializeField] Transform groundDetector;
+    [SerializeField] Transform leftWallDetector;
+    [SerializeField] Transform rightWallDetector;
 
     // Player
     [SerializeField] float maxMovementSpeed;
@@ -14,9 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] float maxFallSpeed;
 
     // Status player
-    bool isOnGround;
-    bool isOnWallLeft, isOnWallRight;
-    float wallTimer = 5.0f;
+    bool isOnGround, isOnWallLeft, isOnWallRight;
+    bool canExtraJump;
 
     // Fungsi awal
     void Start()
@@ -29,53 +28,35 @@ public class Player : MonoBehaviour
     {
         // Gerak kanan kiri
         float direction = Input.GetAxis("Horizontal");
-        compPlayerBody.velocity = new Vector2(direction * maxMovementSpeed, compPlayerBody.velocity.y);
+        playerBody.velocity = new Vector2(direction * maxMovementSpeed, playerBody.velocity.y);
 
         // Lompat
-        if (Input.GetButtonDown("Jump") && isOnGround)
+        if (Input.GetButtonDown("Jump"))
         {
-            compPlayerBody.velocity = new Vector2(compPlayerBody.velocity.x, maxJumpPower);
+            if (isOnGround || canExtraJump)
+                playerBody.velocity = new Vector2(playerBody.velocity.x, maxJumpPower);
+                if (canExtraJump) canExtraJump = false;
         }
 
         // Batas kecepatan jatuh
-        compPlayerBody.velocity = new Vector2(compPlayerBody.velocity.x, Mathf.Max(-maxFallSpeed, compPlayerBody.velocity.y));
+        playerBody.velocity = new Vector2(playerBody.velocity.x, Mathf.Max(-maxFallSpeed, playerBody.velocity.y));
     }
 
     void FixedUpdate()
     {
-        WallCheck();
         GroundCheck();
+        WallCheck();
     }
 
-    // Deteksi tanah
     void GroundCheck()
     {
-        // Unity Insanity 1: kenapa harus declare collider dulu
-        RaycastHit2D[] colliders = new RaycastHit2D[2];
-        isOnGround = compGroundDetector.Cast(Vector2.zero, colliders) > 0;
+        isOnGround = Physics2D.CircleCastAll(groundDetector.position, 0.5f, Vector2.down, 0.01f).Length > 1;
+        if (isOnGround) canExtraJump = true;
     }
 
     void WallCheck()
     {
-        RaycastHit2D[] leftColliders = new RaycastHit2D[2];
-        RaycastHit2D[] rightColliders = new RaycastHit2D[2];
 
-        isOnWallLeft = compLeftWallDetector.Cast(Vector2.zero, leftColliders) > 1;
-        isOnWallRight = compRightWallDetector.Cast(Vector2.zero, rightColliders) > 1;
-
-        // Jika nempel tembok tapi gak ditanah
-        if ((isOnWallLeft || isOnWallRight) && !isOnGround)
-        {
-            wallTimer -= Time.deltaTime;
-        }
-        else wallTimer = 5.0f;
-
-        // TODO: Jika timer tembok masih, nyangkut ditembok
-        if (wallTimer > 0) {
-
-        }
-        else {
-
-        }
     }
 }
+
