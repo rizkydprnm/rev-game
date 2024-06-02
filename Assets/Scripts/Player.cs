@@ -9,11 +9,11 @@ public class Player : MonoBehaviour
     [SerializeField] Transform wallDetector;
 
     // Player
-    [SerializeField] float maxMovementSpeed;
-    [SerializeField] float maxJumpPower;
-    [SerializeField] float maxFallSpeed;
-    [SerializeField] float acceleration;
-    [SerializeField] float deceleration;
+    [SerializeField, Min(0f)] float maxMovementSpeed;
+    [SerializeField, Min(0f)] float maxJumpPower;
+    [SerializeField, Min(0f)] float maxFallSpeed;
+    [SerializeField, Min(0f)] float acceleration;
+    [SerializeField, Min(0f)] float deceleration;
 
     // Status player
     bool canExtraJump;
@@ -31,58 +31,77 @@ public class Player : MonoBehaviour
     // Main loop
     void Update()
     {
-        // Buat velocity nya Rigid body bisa diedit
+        // Cek input
+        float direction = Input.GetAxis("Horizontal");
+
+        // Buat velocity nya rigid body bisa diedit
         velocity = playerBody.velocity;
+
+        // Bisa wall jump?
+        canWallJump = !IsOnGround() && IsOnWall() && direction != 0f;
 
         // Double jump aktif saat menyentuh tanah
         if (IsOnGround()) canExtraJump = true;
 
-        // Handle jump
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (IsOnGround())
-            {
-                velocity.y = maxJumpPower;
-            }
-            else if (canExtraJump)
-            {
-                canExtraJump = false;
-                velocity.y = maxJumpPower;
-            }
-        }
+        // Batasi fall speed
+        velocity.y = Mathf.Max(velocity.y, -maxFallSpeed);
 
-        // Input
-        float direction = Input.GetAxis("Horizontal");
-        if (direction != 0f)
+        // Input movement kanan kiri
+        if (!isWallJumping)
         {
-            if (Mathf.Sign(velocity.x) != Mathf.Sign(direction) && velocity.x != 0f)
+
+            if (direction != 0f)
+            {
+                if (Mathf.Sign(velocity.x) != Mathf.Sign(direction) && velocity.x != 0f)
+                {
+                    velocity.x = Mathf.MoveTowards(
+                        velocity.x,
+                        0,
+                        deceleration * Time.deltaTime
+                    );
+
+                }
+                else
+                {
+                    velocity.x = Mathf.MoveTowards(
+                        velocity.x,
+                        maxMovementSpeed * direction,
+                        acceleration * Time.deltaTime
+                    );
+                }
+            }
+            else
             {
                 velocity.x = Mathf.MoveTowards(
                     velocity.x,
                     0,
                     deceleration * Time.deltaTime
                 );
-
             }
-            else
+        }
+
+        // Input movement lompat
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (IsOnGround())
             {
-                velocity.x = Mathf.MoveTowards(
-                    velocity.x,
-                    maxMovementSpeed * direction,
-                    acceleration * Time.deltaTime
-                );
+                velocity.y = maxJumpPower;
+            }
+            else if (canExtraJump && !canWallJump)
+            {
+                canExtraJump = false;
+                velocity.y = maxJumpPower;
+            }
+            else if (canWallJump)
+            {
+                velocity = new Vector2(maxMovementSpeed * Mathf.Sign(-direction), maxJumpPower);
+                isWallJumping = true;
+                Invoke(nameof(DisableWallJumping), 0.5f);
             }
         }
-        else {
-            velocity.x = Mathf.MoveTowards(
-                velocity.x,
-                0,
-                deceleration * Time.deltaTime
-            );
-        }
 
+        // Kembalikan velocity
         playerBody.velocity = velocity;
-
     }
 
     bool IsOnGround()
@@ -93,6 +112,11 @@ public class Player : MonoBehaviour
     bool IsOnWall()
     {
         return Physics2D.OverlapBoxAll(wallDetector.position, new Vector2(1.02f, 0.5f), 0).Length > 1;
+    }
+
+    void DisableWallJumping()
+    {
+        isWallJumping = false;
     }
 }
 
