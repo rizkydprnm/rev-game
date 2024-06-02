@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,13 +12,15 @@ public class Player : MonoBehaviour
     [SerializeField] float maxMovementSpeed;
     [SerializeField] float maxJumpPower;
     [SerializeField] float maxFallSpeed;
-    [SerializeField] float wallSlideSpeed;
-    [SerializeField] float wallJumpKnockback;
+    [SerializeField] float acceleration;
+    [SerializeField] float deceleration;
 
     // Status player
     bool canExtraJump;
     bool canWallJump;
     bool isWallJumping;
+
+    Vector2 velocity;
 
     // Fungsi awal
     void Start()
@@ -25,44 +28,61 @@ public class Player : MonoBehaviour
 
     }
 
-    // Update dengan sync fisika
+    // Main loop
     void Update()
     {
-        // Gerak kanan kiri
-        float direction = Input.GetAxis("Horizontal");
-        if (!isWallJumping && direction != 0)
-            playerBody.velocity = new Vector2(direction * maxMovementSpeed, playerBody.velocity.y);
+        // Buat velocity nya Rigid body bisa diedit
+        velocity = playerBody.velocity;
 
-        // Lompat
+        // Double jump aktif saat menyentuh tanah
+        if (IsOnGround()) canExtraJump = true;
+
+        // Handle jump
         if (Input.GetButtonDown("Jump"))
         {
-            if (IsOnGround() || canExtraJump)
-                playerBody.velocity = new Vector2(playerBody.velocity.x, maxJumpPower);
-            if (canExtraJump) canExtraJump = false;
-
-            // Wall jump
-            if (canWallJump)
+            if (IsOnGround())
             {
-                isWallJumping = true;
-                if (direction < 0f) playerBody.velocity = new Vector2(wallJumpKnockback, maxJumpPower);
-                else if (direction > 0f) playerBody.velocity = new Vector2(-wallJumpKnockback, maxJumpPower);
-                Invoke(nameof(StopWallJump), 0.5f);
+                velocity.y = maxJumpPower;
+            }
+            else if (canExtraJump)
+            {
+                canExtraJump = false;
+                velocity.y = maxJumpPower;
             }
         }
 
+        // Input
+        float direction = Input.GetAxis("Horizontal");
+        if (direction != 0f)
+        {
+            if (Mathf.Sign(velocity.x) != Mathf.Sign(direction) && velocity.x != 0f)
+            {
+                velocity.x = Mathf.MoveTowards(
+                    velocity.x,
+                    0,
+                    deceleration * Time.deltaTime
+                );
 
-        // Bisa wall jump?
-        if (IsOnWall() && !IsOnGround() && direction != 0f)
-        {
-            canWallJump = true;
-            playerBody.velocity = new Vector2(playerBody.velocity.x, Mathf.Max(-wallSlideSpeed, playerBody.velocity.y));
+            }
+            else
+            {
+                velocity.x = Mathf.MoveTowards(
+                    velocity.x,
+                    maxMovementSpeed * direction,
+                    acceleration * Time.deltaTime
+                );
+            }
         }
-        else
-        {
-            canWallJump = false;
-            // Batas kecepatan jatuh
-            playerBody.velocity = new Vector2(playerBody.velocity.x, Mathf.Max(-maxFallSpeed, playerBody.velocity.y));
+        else {
+            velocity.x = Mathf.MoveTowards(
+                velocity.x,
+                0,
+                deceleration * Time.deltaTime
+            );
         }
+
+        playerBody.velocity = velocity;
+
     }
 
     bool IsOnGround()
@@ -73,11 +93,6 @@ public class Player : MonoBehaviour
     bool IsOnWall()
     {
         return Physics2D.OverlapBoxAll(wallDetector.position, new Vector2(1.02f, 0.5f), 0).Length > 1;
-    }
-
-    void StopWallJump()
-    {
-        isWallJumping = false;
     }
 }
 

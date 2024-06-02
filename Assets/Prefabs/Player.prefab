@@ -200,11 +200,8 @@ MonoBehaviour:
   maxMovementSpeed: 10
   maxJumpPower: 20
   maxFallSpeed: 20
-  wallSlideSpeed: 1
-  wallJumpKnockback: 15
-  canExtraJump: 0
-  canWallJump: 0
-  isWallJumping: 0
+  acceleration: 20
+  deceleration: 100
 --- !u!1 &8733331627760801635
 GameObject:
   m_ObjectHideFlags: 0
