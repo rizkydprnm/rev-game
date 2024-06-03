@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0f)] float acceleration;
     [SerializeField, Min(0f)] float deceleration;
 
+    // Components
+    [SerializeField] SpriteRenderer playerSprite;
+    [SerializeField] Animator anim;
+
     // Status player
     bool canExtraJump;
     bool canWallJump;
@@ -41,7 +45,9 @@ public class Player : MonoBehaviour
         canWallJump = !IsOnGround() && IsOnWall() && direction != 0f;
 
         // Double jump aktif saat menyentuh tanah
-        if (IsOnGround()) canExtraJump = true;
+        if (IsOnGround()) {
+            canExtraJump = true;
+        }
 
         // Batasi fall speed
         velocity.y = Mathf.Max(velocity.y, -maxFallSpeed);
@@ -102,6 +108,14 @@ public class Player : MonoBehaviour
 
         // Kembalikan velocity
         playerBody.velocity = velocity;
+        
+        // Animasi
+        anim.SetBool("Ground", IsOnGround());
+        anim.SetFloat("X Speed", Mathf.Abs(playerBody.velocity.x));
+        anim.SetFloat("Y Speed", Mathf.Abs(playerBody.velocity.y));
+
+        if (Mathf.Sign(playerBody.velocity.x) < 0.1f) playerSprite.flipX = true;
+        else if (Mathf.Sign(playerBody.velocity.x) > 0.1f) playerSprite.flipX = false;
     }
 
     bool IsOnGround()
