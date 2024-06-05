@@ -114,8 +114,8 @@ public class Player : MonoBehaviour
         anim.SetFloat("X Speed", Mathf.Abs(playerBody.velocity.x));
         anim.SetFloat("Y Speed", Mathf.Abs(playerBody.velocity.y));
 
-        if (Mathf.Sign(playerBody.velocity.x) < 0.1f) playerSprite.flipX = true;
-        else if (Mathf.Sign(playerBody.velocity.x) > 0.1f) playerSprite.flipX = false;
+        if (playerBody.velocity.x < 0f) playerSprite.flipX = true;
+        else if (playerBody.velocity.x > 0f) playerSprite.flipX = false;
     }
 
     bool IsOnGround()

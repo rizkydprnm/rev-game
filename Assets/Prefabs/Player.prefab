@@ -148,8 +148,8 @@ MonoBehaviour:
   maxMovementSpeed: 10
   maxJumpPower: 20
   maxFallSpeed: 20
-  acceleration: 20
-  deceleration: 100
+  acceleration: 15
+  deceleration: 20
   playerSprite: {fileID: 2457191431712351042}
   anim: {fileID: 6608034785742962272}
 --- !u!1 &6897677999655376832
@@ -179,9 +179,9 @@ Transform:
   m_GameObject: {fileID: 6897677999655376832}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.037, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.175, z: 0}
+  m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3310691737355500203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
