@@ -111,6 +111,7 @@ public class Player : MonoBehaviour
         
         // Animasi
         anim.SetBool("Ground", IsOnGround());
+        anim.SetBool("Wall", IsOnWall());
         anim.SetFloat("X Speed", Mathf.Abs(playerBody.velocity.x));
         anim.SetFloat("Y Speed", Mathf.Abs(playerBody.velocity.y));
 
