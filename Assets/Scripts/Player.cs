@@ -2,48 +2,39 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Collider
     [SerializeField] Rigidbody2D playerBody;
     [SerializeField] Transform groundDetector;
     [SerializeField] Transform wallDetector;
 
-    // Player
     [SerializeField, Min(0f)] float maxMovementSpeed;
     [SerializeField, Min(0f)] float maxJumpPower;
     [SerializeField, Min(0f)] float maxFallSpeed;
     [SerializeField, Min(0f)] float acceleration;
     [SerializeField, Min(0f)] float deceleration;
 
-    // Components
     [SerializeField] SpriteRenderer playerSprite;
     [SerializeField] Animator anim;
 
-    // Status player
     bool canExtraJump;
     bool canWallJump;
     bool isWallJumping;
 
     Vector2 velocity;
 
-    // Fungsi awal
     void Start()
     {
 
     }
 
-    // Main loop
     void Update()
     {
-        // Cek input
         float direction = Input.GetAxis("Horizontal");
 
         // Buat velocity nya rigid body bisa diedit
         velocity = playerBody.velocity;
 
-        // Bisa wall jump?
         canWallJump = !IsOnGround() && (IsOnWallLeft() || IsOnWallRight());
 
-        // Double jump aktif saat menyentuh tanah
         if (IsOnGround())
         {
             canExtraJump = true;
@@ -100,7 +91,6 @@ public class Player : MonoBehaviour
             }
             else if (canWallJump)
             {
-                // velocity = new Vector2(maxMovementSpeed * Mathf.Sign(-direction), maxJumpPower);
                 if (IsOnWallLeft())
                 {
                     velocity = new Vector2(maxMovementSpeed, maxJumpPower);
@@ -118,7 +108,6 @@ public class Player : MonoBehaviour
         // Kembalikan velocity
         playerBody.velocity = velocity;
 
-        // Animasi
         anim.SetBool("Ground", IsOnGround());
         anim.SetFloat("X Speed", Mathf.Abs(playerBody.velocity.x));
         anim.SetFloat("Y Speed", playerBody.velocity.y);
@@ -134,13 +123,11 @@ public class Player : MonoBehaviour
 
     bool IsOnWallLeft()
     {
-        // return Physics2D.BoxCastAll(wallDetector.position, new Vector2(1.02f, 0.5f), 0).Length > 1;
         return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.left, 0.55f).Length > 1;
     }
 
     bool IsOnWallRight()
     {
-        // return Physics2D.BoxCastAll(wallDetector.position, new Vector2(1.02f, 0.5f), 0).Length > 1;
         return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.right, 0.55f).Length > 1;
     }
 
