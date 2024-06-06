@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -42,10 +41,11 @@ public class Player : MonoBehaviour
         velocity = playerBody.velocity;
 
         // Bisa wall jump?
-        canWallJump = !IsOnGround() && IsOnWall() && direction != 0f;
+        canWallJump = !IsOnGround() && (IsOnWallLeft() || IsOnWallRight());
 
         // Double jump aktif saat menyentuh tanah
-        if (IsOnGround()) {
+        if (IsOnGround())
+        {
             canExtraJump = true;
         }
 
@@ -100,7 +100,16 @@ public class Player : MonoBehaviour
             }
             else if (canWallJump)
             {
-                velocity = new Vector2(maxMovementSpeed * Mathf.Sign(-direction), maxJumpPower);
+                // velocity = new Vector2(maxMovementSpeed * Mathf.Sign(-direction), maxJumpPower);
+                if (IsOnWallLeft())
+                {
+                    velocity = new Vector2(maxMovementSpeed, maxJumpPower);
+                }
+                else if (IsOnWallRight())
+                {
+                    velocity = new Vector2(-maxMovementSpeed, maxJumpPower);
+                }
+
                 isWallJumping = true;
                 Invoke(nameof(DisableWallJumping), 0.5f);
             }
@@ -108,12 +117,11 @@ public class Player : MonoBehaviour
 
         // Kembalikan velocity
         playerBody.velocity = velocity;
-        
+
         // Animasi
         anim.SetBool("Ground", IsOnGround());
-        anim.SetBool("Wall", IsOnWall());
         anim.SetFloat("X Speed", Mathf.Abs(playerBody.velocity.x));
-        anim.SetFloat("Y Speed", Mathf.Abs(playerBody.velocity.y));
+        anim.SetFloat("Y Speed", playerBody.velocity.y);
 
         if (playerBody.velocity.x < 0f) playerSprite.flipX = true;
         else if (playerBody.velocity.x > 0f) playerSprite.flipX = false;
@@ -124,9 +132,16 @@ public class Player : MonoBehaviour
         return Physics2D.CircleCastAll(groundDetector.position, 0.5f, Vector2.down, 0.01f).Length > 1;
     }
 
-    bool IsOnWall()
+    bool IsOnWallLeft()
     {
-        return Physics2D.OverlapBoxAll(wallDetector.position, new Vector2(1.02f, 0.5f), 0).Length > 1;
+        // return Physics2D.BoxCastAll(wallDetector.position, new Vector2(1.02f, 0.5f), 0).Length > 1;
+        return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.left, 0.55f).Length > 1;
+    }
+
+    bool IsOnWallRight()
+    {
+        // return Physics2D.BoxCastAll(wallDetector.position, new Vector2(1.02f, 0.5f), 0).Length > 1;
+        return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.right, 0.55f).Length > 1;
     }
 
     void DisableWallJumping()
