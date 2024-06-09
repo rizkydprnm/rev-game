@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     bool canExtraJump;
     bool canWallJump;
-    bool isWallJumping;
+    float wallJumpingTimeout = 0f;
 
     Vector2 velocity;
 
@@ -28,23 +28,38 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        float direction = Input.GetAxis("Horizontal");
-
         // Buat velocity nya rigid body bisa diedit
         velocity = playerBody.velocity;
 
-        canWallJump = !IsOnGround() && (IsOnWallLeft() || IsOnWallRight());
+        HorizontalMovement();
+        VerticalMovement();
+        PlayerAnimation();
 
-        if (IsOnGround())
-        {
-            canExtraJump = true;
-        }
+        // Kembalikan velocity
+        playerBody.velocity = velocity;
 
-        // Batasi fall speed
-        velocity.y = Mathf.Max(velocity.y, -maxFallSpeed);
+    }
 
-        // Input movement kanan kiri
-        if (!isWallJumping)
+    bool IsOnGround()
+    {
+        return Physics2D.CircleCastAll(groundDetector.position, 0.5f, Vector2.down, 0.01f).Length > 1;
+    }
+
+    bool IsOnWallLeft()
+    {
+        return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.left, 0.55f).Length > 1;
+    }
+
+    bool IsOnWallRight()
+    {
+        return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.right, 0.55f).Length > 1;
+    }
+
+    void HorizontalMovement()
+    {
+        float direction = Input.GetAxis("Horizontal");
+
+        if (wallJumpingTimeout == 0f)
         {
 
             if (direction != 0f)
@@ -76,8 +91,18 @@ public class Player : MonoBehaviour
                 );
             }
         }
+    }
 
-        // Input movement lompat
+    void VerticalMovement()
+    {
+        canWallJump = !IsOnGround() && (IsOnWallLeft() || IsOnWallRight());
+
+        if (IsOnGround())
+            canExtraJump = true;
+
+        // Batasi fall speed
+        velocity.y = Mathf.Max(velocity.y, -maxFallSpeed);
+
         if (Input.GetButtonDown("Jump"))
         {
             if (IsOnGround())
@@ -100,40 +125,20 @@ public class Player : MonoBehaviour
                     velocity = new Vector2(-maxMovementSpeed, maxJumpPower);
                 }
 
-                isWallJumping = true;
-                Invoke(nameof(DisableWallJumping), 0.5f);
+                wallJumpingTimeout = 0.25f;
             }
         }
 
-        // Kembalikan velocity
-        playerBody.velocity = velocity;
+        wallJumpingTimeout = Mathf.MoveTowards(wallJumpingTimeout, 0, Time.deltaTime);
+    }
 
+    void PlayerAnimation() {
         anim.SetBool("Ground", IsOnGround());
         anim.SetFloat("X Speed", Mathf.Abs(playerBody.velocity.x));
         anim.SetFloat("Y Speed", playerBody.velocity.y);
 
         if (playerBody.velocity.x < 0f) playerSprite.flipX = true;
         else if (playerBody.velocity.x > 0f) playerSprite.flipX = false;
-    }
-
-    bool IsOnGround()
-    {
-        return Physics2D.CircleCastAll(groundDetector.position, 0.5f, Vector2.down, 0.01f).Length > 1;
-    }
-
-    bool IsOnWallLeft()
-    {
-        return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.left, 0.55f).Length > 1;
-    }
-
-    bool IsOnWallRight()
-    {
-        return Physics2D.BoxCastAll(wallDetector.position, Vector2.one * 0.5f, 0, Vector2.right, 0.55f).Length > 1;
-    }
-
-    void DisableWallJumping()
-    {
-        isWallJumping = false;
     }
 }
 
