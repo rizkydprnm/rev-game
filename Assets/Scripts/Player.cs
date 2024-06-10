@@ -17,9 +17,11 @@ public class Player : MonoBehaviour
 
     bool canExtraJump;
     bool canWallJump;
+
     float wallJumpingTimeout = 0f;
 
     Vector2 velocity;
+    Vector2 lastCheck;
 
     void Start()
     {
@@ -132,13 +134,24 @@ public class Player : MonoBehaviour
         wallJumpingTimeout = Mathf.MoveTowards(wallJumpingTimeout, 0, Time.deltaTime);
     }
 
-    void PlayerAnimation() {
+    void PlayerAnimation()
+    {
         anim.SetBool("Ground", IsOnGround());
         anim.SetFloat("X Speed", Mathf.Abs(playerBody.velocity.x));
         anim.SetFloat("Y Speed", playerBody.velocity.y);
 
         if (playerBody.velocity.x < 0f) playerSprite.flipX = true;
         else if (playerBody.velocity.x > 0f) playerSprite.flipX = false;
+    }
+
+    public void Respawn()
+    {
+        transform.position = lastCheck;
+    }
+
+    public void SetCheckpoint(Vector2 checkPosition)
+    {
+        lastCheck = checkPosition;
     }
 }
 
