@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     bool canExtraJump;
     bool canWallJump;
 
+    bool dead;
+
     float wallJumpingTimeout = 0f;
 
     Vector2 velocity;
@@ -33,9 +35,12 @@ public class Player : MonoBehaviour
         // Buat velocity nya rigid body bisa diedit
         velocity = playerBody.velocity;
 
-        HorizontalMovement();
-        VerticalMovement();
-        PlayerAnimation();
+        if (!dead)
+        {
+            HorizontalMovement();
+            VerticalMovement();
+            PlayerAnimation();
+        }
 
         // Kembalikan velocity
         playerBody.velocity = velocity;
@@ -144,14 +149,21 @@ public class Player : MonoBehaviour
         else if (playerBody.velocity.x > 0f) playerSprite.flipX = false;
     }
 
-    public void Respawn()
+    void Respawn()
     {
         transform.position = lastCheck;
+        dead = false;
     }
 
     public void SetCheckpoint(Vector2 checkPosition)
     {
         lastCheck = checkPosition;
+    }
+
+    public void Kill()
+    {
+        Invoke(nameof(Respawn), 1f);
+        dead = true;
     }
 }
 
