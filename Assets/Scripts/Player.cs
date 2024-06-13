@@ -164,6 +164,7 @@ public class Player : MonoBehaviour
     {
         Invoke(nameof(Respawn), 1f);
         dead = true;
+        playerBody.velocity = Vector2.zero;
     }
 }
 
