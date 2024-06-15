@@ -4,28 +4,37 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-    public static void Save(string path, SaveData data) {
+    public static string path = "save.dat";
+
+    public static void Save(SaveData data)
+    {
         BinaryFormatter formatter = new BinaryFormatter();
         string saveTo = Application.persistentDataPath + path;
 
-        FileStream stream = new FileStream(saveTo, FileMode.Create);
+        FileStream stream = new(saveTo, FileMode.Create);
         formatter.Serialize(stream, data);
         stream.Close();
     }
 
-    public static SaveData Load(string path) {
+    public static SaveData Load()
+    {
         string loadFrom = Application.persistentDataPath + path;
 
-        if (File.Exists(loadFrom)) {
+        if (File.Exists(loadFrom))
+        {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(loadFrom, FileMode.Open);
+            FileStream stream = new(loadFrom, FileMode.Open);
 
             SaveData value = (SaveData)formatter.Deserialize(stream);
             stream.Close();
 
             return value;
         }
+        else
+        {
+            Save(new SaveData());
+            return Load();
+        }
 
-        return new SaveData();
     }
 }
