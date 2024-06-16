@@ -19,11 +19,14 @@ public class Player : MonoBehaviour
     bool canWallJump;
 
     bool dead;
+    bool timeRunning;
 
     float wallJumpingTimeout = 0f;
 
     Vector2 velocity;
     Vector2 lastCheck;
+
+    public SaveData playerSave;
 
     void Start()
     {
@@ -32,6 +35,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        playerSave.currentTime += timeRunning ? Time.deltaTime : 0;
+
         // Buat velocity nya rigid body bisa diedit
         velocity = playerBody.velocity;
 
