@@ -12,7 +12,7 @@ public static class SaveSystem
         string saveTo = Application.persistentDataPath + path;
 
         FileStream stream = new(saveTo, FileMode.Create);
-        formatter.Serialize(stream, data);
+        formatter.Serialize(stream, JsonUtility.ToJson(data));
         stream.Close();
     }
 
@@ -25,7 +25,7 @@ public static class SaveSystem
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new(loadFrom, FileMode.Open);
 
-            SaveData value = (SaveData)formatter.Deserialize(stream);
+            SaveData value = JsonUtility.FromJson<SaveData>((string) formatter.Deserialize(stream));
             stream.Close();
 
             return value;
