@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-
+        playerSave = SaveSystem.Load();
     }
 
     void Update()

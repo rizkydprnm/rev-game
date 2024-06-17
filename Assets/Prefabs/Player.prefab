@@ -149,7 +149,7 @@ MonoBehaviour:
   maxJumpPower: 20
   maxFallSpeed: 20
   acceleration: 15
-  deceleration: 20
+  deceleration: 30
   playerSprite: {fileID: 2457191431712351042}
   anim: {fileID: 6608034785742962272}
 --- !u!1 &6897677999655376832
