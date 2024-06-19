@@ -156,6 +156,7 @@ public class Player : MonoBehaviour
 
     void Respawn()
     {
+        anim.Play("AnimPlayerIdle");
         transform.position = lastCheck;
         dead = false;
     }
@@ -167,6 +168,7 @@ public class Player : MonoBehaviour
 
     public void Kill()
     {
+        anim.Play("AnimBlank");
         Invoke(nameof(Respawn), 1f);
         dead = true;
         playerBody.velocity = Vector2.zero;
