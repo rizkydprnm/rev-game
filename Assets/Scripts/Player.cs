@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
 
     public void Kill()
     {
-        anim.Play("AnimBlank");
+        anim.Play("AnimPlayerDead");
         Invoke(nameof(Respawn), 1f);
         dead = true;
         playerBody.velocity = Vector2.zero;
