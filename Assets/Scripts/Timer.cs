@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         SaveData playerSave = player.playerSave;
-        TimeSpan timeString = TimeSpan.FromSeconds(playerSave.currentTime);
-        timerText.text = timeString.ToString(@"m\:ss\.fff");
+        TimeSpan timeString = TimeSpan.FromSeconds(playerSave.time);
+        timerText.text = timeString.ToString(@"m\:ss\.ff");
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -24,18 +25,18 @@ public class Player : MonoBehaviour
     float wallJumpingTimeout = 0f;
 
     Vector2 velocity;
+    Vector2 lastCheck;
 
     public SaveData playerSave = new();
 
     void Start()
     {
         playerSave = SaveSystem.Load();
-        transform.position = playerSave.currentCheck;
     }
 
     void Update()
     {
-        playerSave.currentTime += timeRunning ? Time.deltaTime : 0;
+        playerSave.time += timeRunning ? Time.deltaTime : 0;
 
         // Buat velocity nya rigid body bisa diedit
         velocity = playerBody.velocity;
@@ -157,21 +158,36 @@ public class Player : MonoBehaviour
     void Respawn()
     {
         anim.Play("AnimPlayerIdle");
-        transform.position = playerSave.currentCheck;
+        transform.position = lastCheck;
         dead = false;
     }
 
     public void SetCheckpoint(Vector2 checkPosition)
     {
-        playerSave.currentCheck = checkPosition;
+        lastCheck = checkPosition;
     }
 
     public void Kill()
     {
         anim.Play("AnimPlayerDead");
-        Invoke(nameof(Respawn), 1f);
         dead = true;
         playerBody.velocity = Vector2.zero;
+
+        playerSave.lives = Mathf.MoveTowards(playerSave.lives, 0, 0.25f);
+
+        if (playerSave.lives > 0f)
+            Invoke(nameof(Respawn), 1f);
+        else
+        {
+            timeRunning = false;
+            Invoke(nameof(Restart), 2f);
+        }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        playerSave.lives = 1f;
     }
 }
 

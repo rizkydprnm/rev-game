@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0405a05a471680e4fb8103d6bc67cbef
+      internalID: 57316628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6fae4c89988d248a73641f3add6add
+      internalID: -810759734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75f6c07a02cc6146a77df0d481aaf05
+      internalID: -828628945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6dcb07a358a4db4fbaec086d27df8af
+      internalID: 2036016395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_4
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec3829af8cc8a34691417df1229ac7e
+      internalID: 524907051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_5
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcedf210d47bd9c4eb1769bcf95769d2
+      internalID: 2084285771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_6
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037600ecd5b18754d8d82e9123f1505f
+      internalID: -697964474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_7
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647ff6bfc671f634a9a36fa8db6ab927
+      internalID: -236508707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_8
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1f50c9e6f12db42833a90dbc333267
+      internalID: -749226938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_9
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a6ba2593618fd49899f9075410b75b
+      internalID: 2065063694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_10
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b531f50615b314099a735ab50daaa8
+      internalID: -1092387906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_11
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb8e5617590c264da2baf8a3a924323
+      internalID: -1764765083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_12
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7b5de055b7b3e478729f8817c66384
+      internalID: 100188933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramuan-Nyawa_13
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 0
+        width: 197
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a01a9e9077c91e448de63d13620839a
+      internalID: 1112739303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +413,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ramuan-Nyawa_0: 57316628
+      Ramuan-Nyawa_1: -810759734
+      Ramuan-Nyawa_10: -1092387906
+      Ramuan-Nyawa_11: -1764765083
+      Ramuan-Nyawa_12: 100188933
+      Ramuan-Nyawa_13: 1112739303
+      Ramuan-Nyawa_2: -828628945
+      Ramuan-Nyawa_3: 2036016395
+      Ramuan-Nyawa_4: 524907051
+      Ramuan-Nyawa_5: 2084285771
+      Ramuan-Nyawa_6: -697964474
+      Ramuan-Nyawa_7: -236508707
+      Ramuan-Nyawa_8: -749226938
+      Ramuan-Nyawa_9: 2065063694
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
