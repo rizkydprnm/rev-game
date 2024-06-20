@@ -19,14 +19,14 @@ public class Player : MonoBehaviour
     bool canWallJump;
 
     bool dead;
-    bool timeRunning;
+    bool timeRunning = true;
 
     float wallJumpingTimeout = 0f;
 
     Vector2 velocity;
     Vector2 lastCheck;
 
-    public SaveData playerSave;
+    public SaveData playerSave = new();
 
     void Start()
     {
