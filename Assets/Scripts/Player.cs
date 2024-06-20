@@ -24,13 +24,13 @@ public class Player : MonoBehaviour
     float wallJumpingTimeout = 0f;
 
     Vector2 velocity;
-    Vector2 lastCheck;
 
     public SaveData playerSave = new();
 
     void Start()
     {
         playerSave = SaveSystem.Load();
+        transform.position = playerSave.currentCheck;
     }
 
     void Update()
@@ -157,13 +157,13 @@ public class Player : MonoBehaviour
     void Respawn()
     {
         anim.Play("AnimPlayerIdle");
-        transform.position = lastCheck;
+        transform.position = playerSave.currentCheck;
         dead = false;
     }
 
     public void SetCheckpoint(Vector2 checkPosition)
     {
-        lastCheck = checkPosition;
+        playerSave.currentCheck = checkPosition;
     }
 
     public void Kill()
