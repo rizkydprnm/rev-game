@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,9 +106,421 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TrapWood_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 47
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665af2893c0b9ba4fbac0a91188b0a0d
+      internalID: 1604391743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180f93dd670ff114e8148931da6e7543
+      internalID: -997138352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_2
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eea91922d7bf754bbaf78a68018f955
+      internalID: -1843721698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55123f0119e28aa4195c15e1867fa59e
+      internalID: 875100021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_4
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0976e9423a135429dd404f71b88234
+      internalID: -14798917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_5
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd12c9d80d1cf014cb5852bc061b98a2
+      internalID: 777734847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_6
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54479e5927aaab498c99474cdf5cd30
+      internalID: 281685721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_7
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79782d05ad0d33149944482b985af70e
+      internalID: 397390941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_8
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b381eb7aee84ce043a815eb4240937d2
+      internalID: 61992484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_9
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99c1950b0a4d914c972d2cba649e884
+      internalID: 1194480815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_10
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d900abe749d64734c90cfef6ae1d511c
+      internalID: 1599209595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_11
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a1025bc9feca246bdb9da54c0e9008
+      internalID: -1605628176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_12
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8d332863f714e41baae9573a284bb4
+      internalID: -160150027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_13
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb77c6a2d7b591d40a48c81ff9c62f97
+      internalID: -1959459475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_14
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b4694333aff174a988197fde5522a1
+      internalID: -787953111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_15
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd30f289993cacb44834711cbd3b9264
+      internalID: -171930283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_16
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594b64a45686c544b8f53075fedb08ce
+      internalID: -1549733684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_17
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c963507311833b4e93a61c1c429ac69
+      internalID: -1556492127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrapWood_18
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 46
+        width: 75
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0af596c63e12942b131e0a345b8a9c
+      internalID: 2104537883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +531,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TrapWood_0: 1604391743
+      TrapWood_1: -997138352
+      TrapWood_10: 1599209595
+      TrapWood_11: -1605628176
+      TrapWood_12: -160150027
+      TrapWood_13: -1959459475
+      TrapWood_14: -787953111
+      TrapWood_15: -171930283
+      TrapWood_16: -1549733684
+      TrapWood_17: -1556492127
+      TrapWood_18: 2104537883
+      TrapWood_2: -1843721698
+      TrapWood_3: 875100021
+      TrapWood_4: -14798917
+      TrapWood_5: 777734847
+      TrapWood_6: 281685721
+      TrapWood_7: 397390941
+      TrapWood_8: 61992484
+      TrapWood_9: 1194480815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

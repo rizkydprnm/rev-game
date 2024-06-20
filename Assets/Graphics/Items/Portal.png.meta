@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6fde2a482005e264aa40b4bb2cd1d249
+guid: f86d1081aa5a1794bacdf6134b830ef4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 90
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,33 +81,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,232 +110,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: API OBor_0
+      name: Portal_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 0
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 208
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcafe0369ab3bf6449b31dcb2bfb0250
-      internalID: 1053878284
+      spriteID: 1ff49c5b263756e4cba8906ee317616c
+      internalID: -72427747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_1
+      name: Portal_1
       rect:
         serializedVersion: 2
-        x: 86
+        x: 208
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 205
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e680cec8ebbcff4ea878bef7925a318
-      internalID: 162908852
+      spriteID: 35d463cef50c63c4d9b6dd5deaf591b7
+      internalID: 1086714239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_3
+      name: Portal_2
       rect:
         serializedVersion: 2
-        x: 278
+        x: 414
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 206
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23aebac743e4472498cc4ae0ac0f88d6
-      internalID: -1610585303
+      spriteID: 2b3a929fd76877d4eb2f3f1a7340ac47
+      internalID: -594215674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_4
+      name: Portal_3
       rect:
         serializedVersion: 2
-        x: 342
-        y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 621
+        y: 2
+        width: 207
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14518426292f6454dad2e286b58decec
-      internalID: -1841125187
+      spriteID: ad6dccd78369201428bc142439e8af76
+      internalID: 488866483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_5
+      name: Portal_4
       rect:
         serializedVersion: 2
-        x: 406
+        x: 829
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 207
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f670f3b0a10e6c7419100216a3446f06
-      internalID: -1625087906
+      spriteID: df7d864b0ae6076408e2f5f1faa0ed64
+      internalID: 2105170510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_6
+      name: Portal_5
       rect:
         serializedVersion: 2
-        x: 470
+        x: 1036
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 207
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e17c8cf88631cd9479037ff9ea5524f3
-      internalID: -1163392349
+      spriteID: a91cf7e515335db408cc63222a2dbefc
+      internalID: -186996903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_7
+      name: Portal_6
       rect:
         serializedVersion: 2
-        x: 150
+        x: 1243
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 206
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ed5418f189c0964492d7ae0e5cb38a0
-      internalID: -1218115380
+      spriteID: ddb6d766ce0dcde4fbc40b4b90467da7
+      internalID: 1044498079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_8
+      name: Portal_7
       rect:
         serializedVersion: 2
-        x: 214
+        x: 1449
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 206
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 610a83c65bc2f61419efe9694de3ce7a
-      internalID: 809217394
+      spriteID: 3d45caf1d987db04796d3be66aa64619
+      internalID: -95891305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: API OBor_9
+      name: Portal_8
       rect:
         serializedVersion: 2
-        x: 534
+        x: 1655
         y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 208
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c44266d5993d0cb4580794257b5ca2cd
-      internalID: 2002186243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: API OBor_10
-      rect:
-        serializedVersion: 2
-        x: 598
-        y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81d68f28167404c4b91c7b5eae10d1fc
-      internalID: -179438868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: API OBor_11
-      rect:
-        serializedVersion: 2
-        x: 662
-        y: 0
-        width: 20
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1444ed19334f0b74e9f62bf6539e681a
-      internalID: -580078291
+      spriteID: c080519d45857414a9df1c932b0abc3d
+      internalID: 1898487224
       vertices: []
       indices: 
       edges: []
@@ -364,18 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      API OBor_0: 1053878284
-      API OBor_1: 162908852
-      API OBor_10: -179438868
-      API OBor_11: -580078291
-      API OBor_2: 2098478119
-      API OBor_3: -1610585303
-      API OBor_4: -1841125187
-      API OBor_5: -1625087906
-      API OBor_6: -1163392349
-      API OBor_7: -1218115380
-      API OBor_8: 809217394
-      API OBor_9: 2002186243
+      Portal_0: -72427747
+      Portal_1: 1086714239
+      Portal_2: -594215674
+      Portal_3: 488866483
+      Portal_4: 2105170510
+      Portal_5: -186996903
+      Portal_6: 1044498079
+      Portal_7: -95891305
+      Portal_8: 1898487224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
