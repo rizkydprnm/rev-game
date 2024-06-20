@@ -3,13 +3,11 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         transform.localScale = Vector2.zero;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -32,7 +30,6 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        SaveSystem.Save(GameObject.Find("Player").GetComponent<Player>().playerSave);
         Time.timeScale = 1f;
         SceneManager.LoadSceneAsync("MainMenu");
     }

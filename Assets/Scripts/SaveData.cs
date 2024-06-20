@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class SaveData
 {
     public int stage = 1;

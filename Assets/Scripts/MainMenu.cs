@@ -1,21 +1,22 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     public void NewGame()
     {
-        Debug.Log("New Game");
         SaveSystem.Save(new SaveData());
+        SceneManager.LoadSceneAsync("Level1");
     }
 
     public void ContinueGame()
     {
-        Debug.Log("Continue");
+        SaveData data = SaveSystem.Load();
+        SceneManager.LoadSceneAsync(string.Format("Level{0}", data.stage));
     }
 
     public void ExitGame()
     {
-        Debug.Log("Exit Game");
         Application.Quit();
     }
 }
