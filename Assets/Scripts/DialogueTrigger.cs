@@ -23,6 +23,7 @@ public class Dialogue
  
 public class DialogueTrigger : MonoBehaviour
 {
+    bool passed ;
     public Dialogue dialogue;
  
     public void TriggerDialogue()
@@ -32,8 +33,9 @@ public class DialogueTrigger : MonoBehaviour
  
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") && !passed)
         {
+            passed = true ;
             TriggerDialogue();
         }
     }

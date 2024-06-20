@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 76
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,12 +126,12 @@ TextureImporter:
       name: Checkpoint_0
       rect:
         serializedVersion: 2
-        x: 116
+        x: 113
         y: 16
         width: 226
-        height: 80
+        height: 229
       alignment: 9
-      pivot: {x: 0.27433628, y: 0}
+      pivot: {x: 0.2893695, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Checkpoint_1
       rect:
         serializedVersion: 2
-        x: 478
+        x: 479
         y: 16
         width: 226
-        height: 82
+        height: 229
       alignment: 9
-      pivot: {x: 0.28, y: 0}
+      pivot: {x: 0.2784667, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: Checkpoint_2
       rect:
         serializedVersion: 2
-        x: 842
+        x: 839
         y: 16
         width: 226
-        height: 127
+        height: 229
       alignment: 9
-      pivot: {x: 0.28318584, y: 0}
+      pivot: {x: 0.29510525, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: Checkpoint_3
       rect:
         serializedVersion: 2
-        x: 1206
+        x: 1203
         y: 16
-        width: 198
-        height: 210
+        width: 226
+        height: 229
       alignment: 9
-      pivot: {x: 0.32828283, y: 0}
+      pivot: {x: 0.29121116, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,9 +210,9 @@ TextureImporter:
       name: Checkpoint_4
       rect:
         serializedVersion: 2
-        x: 1567
+        x: 1564
         y: 16
-        width: 135
+        width: 139
         height: 229
       alignment: 9
       pivot: {x: 0.4814815, y: 0}
@@ -231,12 +231,12 @@ TextureImporter:
       name: Checkpoint_5
       rect:
         serializedVersion: 2
-        x: 1930
+        x: 1929
         y: 16
-        width: 136
+        width: 139
         height: 229
       alignment: 9
-      pivot: {x: 0.4779412, y: 0}
+      pivot: {x: 0.46606445, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: Checkpoint_6
       rect:
         serializedVersion: 2
-        x: 2294
+        x: 2292
         y: 16
-        width: 134
+        width: 139
         height: 229
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.471699, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: Checkpoint_7
       rect:
         serializedVersion: 2
-        x: 2657
+        x: 2656
         y: 16
-        width: 134
-        height: 231
+        width: 139
+        height: 229
       alignment: 9
-      pivot: {x: 0.48550725, y: 0}
+      pivot: {x: 0.4540471, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,10 +296,10 @@ TextureImporter:
         serializedVersion: 2
         x: 3021
         y: 16
-        width: 134
+        width: 139
         height: 229
       alignment: 9
-      pivot: {x: 0.48507464, y: 0}
+      pivot: {x: 0.45040607, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: Checkpoint_9
       rect:
         serializedVersion: 2
-        x: 3382
+        x: 3380
         y: 16
-        width: 136
+        width: 139
         height: 229
       alignment: 9
-      pivot: {x: 0.4890511, y: 0}
+      pivot: {x: 0.4814815, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,174 +328,6 @@ TextureImporter:
       bones: []
       spriteID: 9f7169ffada1be545a49fedb039f72d0
       internalID: -1161601810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_10
-      rect:
-        serializedVersion: 2
-        x: 3746
-        y: 16
-        width: 137
-        height: 231
-      alignment: 9
-      pivot: {x: 0.48175183, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd632fb132fb396469993723239a9f2a
-      internalID: -985881245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_11
-      rect:
-        serializedVersion: 2
-        x: 4106
-        y: 16
-        width: 137
-        height: 232
-      alignment: 9
-      pivot: {x: 0.4890511, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b2bde77ef9f03e45a8eea322a3c9e95
-      internalID: -1302222865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_12
-      rect:
-        serializedVersion: 2
-        x: 4470
-        y: 16
-        width: 137
-        height: 232
-      alignment: 9
-      pivot: {x: 0.4890511, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0231eb72242cb514d8a5c9a97bac2b55
-      internalID: 1603247036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_13
-      rect:
-        serializedVersion: 2
-        x: 4833
-        y: 16
-        width: 138
-        height: 232
-      alignment: 9
-      pivot: {x: 0.48550725, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f2fd04a95988ea48977a2fcc3b640b1
-      internalID: 1934563231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_14
-      rect:
-        serializedVersion: 2
-        x: 5194
-        y: 16
-        width: 137
-        height: 232
-      alignment: 9
-      pivot: {x: 0.4890511, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecc322c6d0567bb4488c5cff8f990d7b
-      internalID: 1715150471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_15
-      rect:
-        serializedVersion: 2
-        x: 5561
-        y: 16
-        width: 134
-        height: 232
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bc2f844e88032e4db0b415b2b005667
-      internalID: -468136287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_16
-      rect:
-        serializedVersion: 2
-        x: 5921
-        y: 16
-        width: 141
-        height: 232
-      alignment: 9
-      pivot: {x: 0.47517732, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9abbe206b93e4f4b98998dc936ae308
-      internalID: 1993599180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Checkpoint_17
-      rect:
-        serializedVersion: 2
-        x: 6285
-        y: 16
-        width: 137
-        height: 232
-      alignment: 9
-      pivot: {x: 0.4890511, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c01e6908dcf013d44b83e9b5e8105e3e
-      internalID: 1162170651
       vertices: []
       indices: 
       edges: []
@@ -521,6 +353,7 @@ TextureImporter:
       Checkpoint_15: -468136287
       Checkpoint_16: 1993599180
       Checkpoint_17: 1162170651
+      Checkpoint_18: 931038805
       Checkpoint_2: 2033452911
       Checkpoint_3: -1629019887
       Checkpoint_4: 1580508231
