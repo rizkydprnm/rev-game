@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer playerSprite;
     [SerializeField] Animator anim;
 
+    [SerializeField] AudioSource jumpSound;
+
     bool canExtraJump;
     bool canWallJump;
 
@@ -74,7 +76,6 @@ public class Player : MonoBehaviour
 
         if (wallJumpingTimeout == 0f)
         {
-
             if (direction != 0f)
             {
                 if (Mathf.Sign(velocity.x) != Mathf.Sign(direction) && velocity.x != 0f)
@@ -120,10 +121,12 @@ public class Player : MonoBehaviour
         {
             if (IsOnGround())
             {
+                jumpSound.Play();
                 velocity.y = maxJumpPower;
             }
             else if (canExtraJump && !canWallJump)
             {
+                jumpSound.Play();
                 canExtraJump = false;
                 velocity.y = maxJumpPower;
             }
@@ -131,10 +134,12 @@ public class Player : MonoBehaviour
             {
                 if (IsOnWallLeft())
                 {
+                    jumpSound.Play();
                     velocity = new Vector2(maxMovementSpeed, maxJumpPower);
                 }
                 else if (IsOnWallRight())
                 {
+                    jumpSound.Play();
                     velocity = new Vector2(-maxMovementSpeed, maxJumpPower);
                 }
 
