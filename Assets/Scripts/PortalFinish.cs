@@ -16,8 +16,7 @@ public class PortalFinish : MonoBehaviour
             playerSave.stage = nextLevel;
             SaveSystem.Save(playerSave);
             
-            Destroy(collider);
-
+            Destroy(collider.gameObject);
             Invoke(nameof(NextLevel), 5f);
         }
     }

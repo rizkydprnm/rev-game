@@ -1,4 +1,4 @@
-using System; 
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -10,8 +10,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SaveData playerSave = player.playerSave;
-        TimeSpan timeString = TimeSpan.FromSeconds(playerSave.time);
-        timerText.text = timeString.ToString(@"m\:ss\.ff");
+        if (player)
+        {
+            SaveData playerSave = player.playerSave;
+            TimeSpan timeString = TimeSpan.FromSeconds(playerSave.time);
+            timerText.text = timeString.ToString(@"m\:ss\.ff");
+        }
     }
 }

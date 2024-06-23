@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerSave = SaveSystem.Load();
+        lastCheck = transform.position;
     }
 
     void Update()
@@ -162,9 +163,9 @@ public class Player : MonoBehaviour
 
     void Respawn()
     {
+        dead = false;
         anim.Play("AnimPlayerIdle");
         transform.position = lastCheck;
-        dead = false;
     }
 
     public void SetCheckpoint(Vector2 checkPosition)
@@ -174,25 +175,28 @@ public class Player : MonoBehaviour
 
     public void Kill()
     {
-        anim.Play("AnimPlayerDead");
-        dead = true;
-        playerBody.velocity = Vector2.zero;
-
-        playerSave.lives = Mathf.MoveTowards(playerSave.lives, 0, 0.25f);
-
-        if (playerSave.lives > 0f)
-            Invoke(nameof(Respawn), 1f);
-        else
+        if (!dead)
         {
-            timeRunning = false;
-            Invoke(nameof(Restart), 2f);
+            dead = true;
+            anim.Play("AnimPlayerDead");
+            playerBody.velocity = Vector2.zero;
+
+            playerSave.lives = Mathf.MoveTowards(playerSave.lives, 0, 0.25f);
+
+            if (playerSave.lives > 0f)
+                Invoke(nameof(Respawn), 1f);
+            else
+            {
+                timeRunning = false;
+                Invoke(nameof(Restart), 2f);
+            }
         }
     }
 
     public void Restart()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-        playerSave.lives = 1f;
+        playerSave.lives = 5f;
     }
 }
 
