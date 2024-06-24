@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     Vector2 velocity;
     Vector2 lastCheck;
 
+    float startingTime;
+
     [HideInInspector] public bool timeRunning = true;
     [HideInInspector] public SaveData playerSave = new();
 
@@ -35,6 +37,7 @@ public class Player : MonoBehaviour
     {
         playerSave = SaveSystem.Load();
         lastCheck = transform.position;
+        startingTime = playerSave.time;
     }
 
     void Update()
@@ -195,8 +198,11 @@ public class Player : MonoBehaviour
 
     public void Restart()
     {
+        playerSave.lives = 1f;
+        playerSave.time = startingTime;
+
+        SaveSystem.Save(playerSave);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-        playerSave.lives = 5f;
     }
 }
 
