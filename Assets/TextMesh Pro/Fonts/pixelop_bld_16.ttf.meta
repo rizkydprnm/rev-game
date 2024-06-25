@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dabc7a1da2dd16e4c8453c0235bfce01
+guid: e2c3138491be8f7449f860537b434409
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Super Boys
+  - Pixel Operator Mono
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

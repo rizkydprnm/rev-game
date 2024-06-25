@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c185c8e8bc6197f43b76533ae8d2d0ed
+guid: e4cf9dd696432d54c9e458215093ba22
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Rusty Hooks
+  - Pixel Operator Mono 8
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

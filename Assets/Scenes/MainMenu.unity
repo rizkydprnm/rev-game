@@ -182,15 +182,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f95464814b935d24e945f2097553684a, type: 2}
-  m_sharedMaterial: {fileID: -8905361685039654832, guid: f95464814b935d24e945f2097553684a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8307281d36c6b5f4099a30d997aa8e67, type: 2}
+  m_sharedMaterial: {fileID: 6526273616153971726, guid: 8307281d36c6b5f4099a30d997aa8e67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -696,15 +696,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f95464814b935d24e945f2097553684a, type: 2}
-  m_sharedMaterial: {fileID: -8905361685039654832, guid: f95464814b935d24e945f2097553684a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8307281d36c6b5f4099a30d997aa8e67, type: 2}
+  m_sharedMaterial: {fileID: 6526273616153971726, guid: 8307281d36c6b5f4099a30d997aa8e67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1031,15 +1031,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f95464814b935d24e945f2097553684a, type: 2}
-  m_sharedMaterial: {fileID: -8905361685039654832, guid: f95464814b935d24e945f2097553684a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8307281d36c6b5f4099a30d997aa8e67, type: 2}
+  m_sharedMaterial: {fileID: 6526273616153971726, guid: 8307281d36c6b5f4099a30d997aa8e67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1469,7 +1469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.5}
   m_AnchorMax: {x: 0.25, y: 0.5}
-  m_AnchoredPosition: {x: -186.98, y: -357.43}
+  m_AnchoredPosition: {x: -186.98001, y: -328}
   m_SizeDelta: {x: 233.03, y: 44.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &758191703
@@ -1625,8 +1625,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: REV
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 98fea53006221c144ab3b8c6bb8d1ea0, type: 2}
-  m_sharedMaterial: {fileID: -2141423133078974464, guid: 98fea53006221c144ab3b8c6bb8d1ea0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 93ea3bdf50465254a9e51ee8028c3d47, type: 2}
+  m_sharedMaterial: {fileID: -6994482033854756808, guid: 93ea3bdf50465254a9e51ee8028c3d47, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1650,8 +1650,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2006,7 +2006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.5}
   m_AnchorMax: {x: 0.25, y: 0.5}
-  m_AnchoredPosition: {x: 303.49, y: 165}
+  m_AnchoredPosition: {x: 303.49, y: 149}
   m_SizeDelta: {x: 278.52, y: 60.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461767939
@@ -2160,10 +2160,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: made by Celestial Rev @2024
+  m_text: Celestial Rev, 2024
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 389597f74afdd3b46a12ce536bad269a, type: 2}
-  m_sharedMaterial: {fileID: 8678018684890224656, guid: 389597f74afdd3b46a12ce536bad269a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 93ea3bdf50465254a9e51ee8028c3d47, type: 2}
+  m_sharedMaterial: {fileID: -6994482033854756808, guid: 93ea3bdf50465254a9e51ee8028c3d47, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2187,8 +2187,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 11.98
+  m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2534,10 +2534,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The floklore Warak
+  m_text: The Warak Folklore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 389597f74afdd3b46a12ce536bad269a, type: 2}
-  m_sharedMaterial: {fileID: 8678018684890224656, guid: 389597f74afdd3b46a12ce536bad269a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a61674db19337e34d8df49b05fa7ae32, type: 2}
+  m_sharedMaterial: {fileID: -1315281535213171609, guid: a61674db19337e34d8df49b05fa7ae32, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2561,8 +2561,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 21.04
+  m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

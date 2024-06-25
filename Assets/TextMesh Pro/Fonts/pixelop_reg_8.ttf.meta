@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e04262dbc77ddc94c9a063b8fe42f3b6
+guid: c9e96f339a509fd4fa1648c32f01d105
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Super Bubble
+  - Pixel Operator Mono 8
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
