@@ -247,8 +247,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f95464814b935d24e945f2097553684a, type: 2}
+  m_sharedMaterial: {fileID: -8905361685039654832, guid: f95464814b935d24e945f2097553684a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
